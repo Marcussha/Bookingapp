@@ -1,0 +1,26 @@
+{% extends ".\base.html" %}
+  
+{% block title %} Add New Service {% endblock title %}
+  
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Service ID</th>
+                <th>Name of Service</th>
+            </tr>
+        </thead>
+        {% for service in services %}
+        <tr>
+            <td>{{service.serviceid}}</td>
+            <td>{{service.name_service}}</td>
+            <td>
+                <a href="edit/{{ service.serviceid }}">Edit</a>
+                <a href="delete/{{service.serviceid}}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<button><a style="color:red;" href="create">Create</a></button>
+{% endblock content %}

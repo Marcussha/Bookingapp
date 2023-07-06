@@ -1,0 +1,25 @@
+{% extends ".\base.html" %}
+  
+{% block title %}Add New Employee Records{% endblock title %}
+  
+{% block content %}
+    <form method="POST" action="create">
+        {% csrf_token %}
+        <div>
+            <br>
+            <p>
+                <h3> Import Details </h3>
+            </p>
+            <div>
+                <p> Service Id:</p>{{form.serviceid}}
+            </div>
+            <div>
+                <p> Name of Service: </p>{{form.name_service}}
+            </div>
+            <div>
+                <br>
+                <button type="Submit">Create</button>
+            </div>
+        </div>
+    </form>
+{% endblock content %}
