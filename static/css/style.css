@@ -1,0 +1,19 @@
+body{
+    background: red;
+    height: 80%;
+    margin: 25px 0;
+    padding-left: 200px;
+}
+
+table,th,td{
+   border:burlywood
+}
+
+tr:hower{
+    background-color: brown;
+}
+
+th{
+    background-color: blueviolet;
+    color: red
+}  
